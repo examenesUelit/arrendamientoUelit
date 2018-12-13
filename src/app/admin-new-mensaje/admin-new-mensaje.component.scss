@@ -1,0 +1,38 @@
+label {
+    font-size: 23px;
+}
+
+input {
+    font-size: 23px;
+}
+
+textarea {
+    font-size: 23px;
+}
+
+select {
+    font-size: 23px;
+}
+
+h1 {
+    color: rgb(9, 30, 99);
+}
+
+a {
+    font-size: 23px;
+}
+
+.parallax {
+    /* The image used */
+    background-image: linear-gradient(rgba(247, 250, 252, 0.8),
+    rgba(247, 250, 252, 0.8)) ,url("../../assets/parallax/fondo.png"); 
+    /* Set a specific height */
+    /* height: 100vh;  */
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 86vh;
+}

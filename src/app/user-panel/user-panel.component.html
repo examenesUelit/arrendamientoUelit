@@ -1,0 +1,30 @@
+<div class="parallax">
+  <div class="container">
+    <h1 class="text-center pt-4 mb-5"> Ingresar al Grupo </h1>
+
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <div class="card">
+          <h3 class="text-center"> Grupo </h3>
+          <div class="form-group mt-4 mb-4">
+
+            <form #formGuardar="ngForm" (ngSubmit)="onIngresarGrupo(formGuardar)">
+
+              <select name="prioridad" id="prioridad" class="form-control" ngModel>
+                <option> Grupo 1 </option>
+                <option> Grupo 2 </option>
+                <option> Grupo 3 </option>
+                <option> Grupo N </option>
+              </select>
+
+              <input type="submit" value="Ingresar" class="btn btn-info btn-block mt-4">
+            </form>
+
+          </div>
+        </div>
+        <!-- <a routerLink="/panelUserMensaje" class="btn btn-block btn-info"> Ingresar </a> -->
+      </div>
+    </div>
+
+  </div>
+</div>

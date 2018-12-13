@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "dist/examArrendamiento",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

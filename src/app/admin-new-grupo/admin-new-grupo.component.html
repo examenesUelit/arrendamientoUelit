@@ -1,0 +1,24 @@
+<div class="parallax">
+  <div class="container">
+    <h1 class="text-center pt-4"> Crear Grupo </h1>
+
+    <div class="row">
+      <div class="col-md-8 mx-auto mt-3">
+        <div class="card">
+          <div class="card-body">
+            <form #formGuardar="ngForm" (ngSubmit)="onGuardarGrupo(formGuardar)">
+
+              <div class="form-group">
+                <label for="nombre"> Nombre </label>
+                <input type="text" placeholder="Ingresar Nombre" name="grupoName" id="nombre" class="form-control" ngModel>
+              </div>
+
+              <input type="submit" value="Guardar" class="btn btn-info btn-block">
+              <a routerLink="/panelAdminGrupos" class="btn btn-danger btn-block"> Cancelar </a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

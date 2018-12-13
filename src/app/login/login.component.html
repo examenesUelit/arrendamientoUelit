@@ -1,0 +1,35 @@
+<div class="parallax">
+  <div class="container">
+    <div class="row pt-4">
+      <div class="col-md-8 mx-auto">
+        <div class="card">
+          <div class="card-header">
+            <h1 class="text-center pt-4"> Login con Google o Facebook </h1>
+          </div>
+          <div class="card-body">
+            <div class="card-body text-center icon">
+              <i class="fa fa-user"></i>
+            </div>
+            <div class="card-body">
+              <ul class="navbar-nav mr-auto">
+                <button class="btn btn-lg btn-google" (click)="onClickGoogleLogin()">
+                  <i class="fa fa-google-plus"> Google </i>
+                </button>
+              </ul>
+              <ul class="navbar-nav ml-auto mt-4">
+                <button class="btn btn-lg btn-facebook" (click)="onClickFacebookLogin()">
+                  <i class="fa fa-facebook"> Facebook </i>
+                </button>
+              </ul>
+              <ul class="navbar-nav ml-auto mt-4">
+                <a routerLink="/loginAdmin"> Eres Administrador </a>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

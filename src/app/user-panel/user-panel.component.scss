@@ -1,0 +1,18 @@
+select {
+    font-size: 23px;
+}
+
+.parallax {
+    /* The image used */
+    background-image: linear-gradient(rgba(247, 250, 252, 0.7),
+    rgba(247, 250, 252, 0.7)) ,url("../../assets/parallax/fondo1.png"); 
+    /* Set a specific height */
+    /* height: 100vh;  */
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 86vh;
+}
