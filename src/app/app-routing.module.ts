@@ -1,3 +1,4 @@
+// Componentes que tienen ritas
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
@@ -13,7 +14,9 @@ import { UserPanelMensajesComponent } from './user-panel-mensajes/user-panel-men
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginAdminComponent } from './login-admin/login-admin.component';
 import { LoginAdminRegistroComponent } from './login-admin-registro/login-admin-registro.component';
+import { UserPanelLiderComponent } from './user-panel-lider/user-panel-lider.component';
 
+// Listado de Rutas
 const routes: Routes = [
   { path: '', component: SliderComponent },
   { path: 'inico', component: SliderComponent },  
@@ -24,12 +27,12 @@ const routes: Routes = [
   { path: 'panelAdminUsers', component: AdminUsersComponent },
   { path: 'panelAdminMensaje', component: AdminMensajeComponent },
   { path: 'panelAdminNewMensage', component: AdminNewMensajeComponent },
-  { path: 'panelUser', component: UserPanelComponent },
-  { path: 'panelUserMensaje', component: UserPanelMensajesComponent },
+  { path: 'panelUser/:id', component: UserPanelComponent },
+  { path: 'panelUserLider', component: UserPanelLiderComponent },
+  { path: 'panelUserMensaje/:id', component: UserPanelMensajesComponent },
   { path: 'loginAdmin', component: LoginAdminComponent },
   { path: 'loginAdminRegistro', component: LoginAdminRegistroComponent },
   { path: '**', component: NotFoundComponent }
-
 
 ];
 

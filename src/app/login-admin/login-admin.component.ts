@@ -16,6 +16,7 @@ export class LoginAdminComponent implements OnInit {
     window.scrollTo(0, 0);
   }
 
+  // Metodo de acceso por correo electronico y contraseña
   login() {
     this.authService.login(this.loginParams.email, this.loginParams.pwd);
     // this.AutorizacionService.login(this.loginParams.email, this.loginParams.pwd);

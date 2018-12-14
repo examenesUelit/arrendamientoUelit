@@ -12,21 +12,15 @@ export class AdminGruposComponent implements OnInit {
 
   grupos: GrupoInterface[]
 
-  public userNombre: string;
-  public userEmail: string;
-  public userPicture: string;
   public userId: string;
-  public isLogin: boolean = false;
   public isLoginAdmin: boolean = false;
-  public provaider: string;
-  public adminEmail: string;
 
+  // En el metodo constructor se incializa para preguntar si el usuario esta logeado o no
   constructor(private grupoService: GrupoService, private authService: AuthService) {
     this.authService.getAuth().subscribe(auth => {
       if (auth && auth.uid) {
-        this.isLoginAdmin = true;
-        this.adminEmail = authService.getEmail();
-        this.userId = auth.uid
+        this.userId = this.authService.angularFireAuth.auth.currentUser.uid;
+        this.allGrupos()
       }
       else
         this.isLoginAdmin = false
@@ -35,13 +29,13 @@ export class AdminGruposComponent implements OnInit {
 
   ngOnInit() {
     window.scrollTo(0, 0);
-    this.allGrupos()
   }
 
+  // Metodo para obtener todos los usuarios
   allGrupos() {
     this.grupoService.getAllGrupos(this.userId).subscribe(grupos => {
       console.log(grupos)
-      // this.grupos = grupos
+      this.grupos = grupos
     })
   }
 

@@ -1,39 +1,13 @@
 <div class="parallax">
   <div class="container p-5">
-
-    <div class="card text-white bg-primary mb-5">
-      <div class="card-header">Header</div>
-      <div class="card-body">
-        <h5 class="card-title">Primary card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-          content.</p>
+    <!-- apartado para mostrar mensajes a usuarios  -->
+    <div class="card text-white mb-5 alert {{ mensaje.prioridad }}" *ngFor="let mensaje of mensajes">
+      <div class="card-header text-center">
+        <h3> {{ mensaje.titulo }} </h3>
       </div>
-    </div>
-
-    <div class="card text-white bg-success mb-5">
-      <div class="card-header">Header</div>
       <div class="card-body">
-        <h5 class="card-title">Success card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-          content.</p>
-      </div>
-    </div>
-
-    <div class="card text-white bg-danger mb-5">
-      <div class="card-header">Header</div>
-      <div class="card-body">
-        <h5 class="card-title">Danger card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-          content.</p>
-      </div>
-    </div>
-
-    <div class="card text-white bg-warning mb-5">
-      <div class="card-header">Header</div>
-      <div class="card-body">
-        <h5 class="card-title">Warning card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-          content.</p>
+        <h4 class="card-title"> {{ mensaje.mensaje }} </h4>
+        <!-- <p class="card-text"> {{ mensaje.prioridad }} </p> -->
       </div>
     </div>
 

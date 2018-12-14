@@ -11,6 +11,9 @@ import { GrupoInterface } from '../models/grupo';
 })
 export class AdminNewGrupoComponent implements OnInit {
 
+  public userId
+  public isLoginAdmin
+
   grupo: GrupoInterface = {
     grupoId: '',
     grupoName: '',
@@ -18,16 +21,27 @@ export class AdminNewGrupoComponent implements OnInit {
     userEmail: ''
   }
 
-  constructor(private authService: AuthService, private addProducto: GrupoService, private router: Router) { }
+  // En el metodo constructor se incializa para preguntar si el usuario esta logeado o no  
+  constructor(private authService: AuthService, private grupoService: GrupoService, private router: Router) {
+    this.authService.getAuth().subscribe(auth => {
+      if (auth && auth.uid) {
+        this.userId = this.authService.angularFireAuth.auth.currentUser.uid;
+      }
+      else
+        this.isLoginAdmin = false
+    }, error => console.log('isLoginAdmin is False' + error))
+   }
 
   ngOnInit() {
   }
 
+  // Metodo para guardar los datos en la base de datos
   onGuardarGrupo({ value }: { value: GrupoInterface }) {
     this.authService.getAuth().subscribe(user => {
-      value.userId = user.uid
+      value.grupoId = (new Date()).getTime();
+      value.userId = this.userId
       value.userEmail = user.email
-      this.addProducto.addNewGrupo(value, value.userId)
+      this.grupoService.addNewGrupo(value, value.userId)
     })
     this.router.navigate(['/panelAdminGrupos'])
   }

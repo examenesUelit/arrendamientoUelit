@@ -6,29 +6,37 @@
       <div class="col-md-8 mx-auto mt-3">
         <div class="card">
           <div class="card-body">
-            <form #formGuardar="ngForm" (ngSubmit)="onGuardarReceta(formGuardar)">
-
+            <!-- formulario para crear nuevo mensaje -->
+            <form #formGuardar="ngForm" (ngSubmit)="onGuardarMensaje(formGuardar)">
+              <!-- Apartado para ingresar titutlo -->
               <div class="form-group">
                 <label for="titulo"> Titulo </label>
                 <input type="text" placeholder="Ingresar Titulo" name="titulo" id="titulo" class="form-control" ngModel>
               </div>
-
+              <!-- Apartado para ingresar mensaje -->
               <div class="form-group">
                 <label for="mensaje"> Mensaje </label>
                 <textarea type="text" placeholder="Ingresar Mensaje" name="mensaje" id="mensaje" class="form-control"
                   ngModel></textarea>
               </div>
-
+              <!-- Apartado para ingresar prioridad -->
               <div class="form-group">
                 <label for="prioridad"> Prioridad </label>
                 <select name="prioridad" id="prioridad" class="form-control" ngModel>
-                  <option> Alta </option>
-                  <option> Media </option>
-                  <option> Normal </option>
-                  <option> Baja </option>
+                  <option value="btn-danger"> Alta </option>
+                  <option value="btn-info"> Media </option>
+                  <option value="btn-primary"> Normal </option>
+                  <option value="btn-warning"> Baja </option>
                 </select>
               </div>
-
+              <!-- Apartado para ingresar a que grupo pertenece -->
+              <div class="form-group">
+                <label for="grupo"> Seleccionar Grupo </label>
+                <select name="grupo" id="grupo" class="form-control" ngModel>
+                  <option *ngFor="let grupo of grupos"> {{grupo.grupoName}} </option>
+                </select>
+              </div>
+              <!-- Boton para guardar los datos -->
               <input type="submit" value="Guardar" class="btn btn-info btn-block">
               <a routerLink="/panelAdminMensaje" class="btn btn-danger btn-block"> Cancelar </a>
             </form>

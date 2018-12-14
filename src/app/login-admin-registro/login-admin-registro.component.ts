@@ -16,9 +16,10 @@ export class LoginAdminRegistroComponent implements OnInit {
     window.scrollTo(0, 0);
   }
 
+  // Metodo para el rewgistro de administradores
   registrar() {
     // this.AutorizacionService.registro(this.registro.email, this.registro.pwd);
-    this.authService.registro(this.registro.nombre, this.registro.epellidos, this.registro.email, this.registro.pwd)
+    this.authService.registro(this.registro.nombre, this.registro.apellidos, this.registro.email, this.registro.pwd)
   }
 
 }

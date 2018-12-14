@@ -18,6 +18,7 @@ export class AppComponent implements OnInit{
   public provaider: string;
   public adminEmail: string;
 
+  // En el metodo constructor se incializa para preguntar si el usuario esta logeado o no
   constructor(private authService: AuthService) {
     this.authService.getAuth().subscribe(auth => {
       if (auth && auth.uid) {
@@ -33,6 +34,7 @@ export class AppComponent implements OnInit{
     this.onComprobarUserLogin()
   }
 
+  // Metodo para verificar que los usuarios esten logueados
   onComprobarUserLogin() {
     this.authService.getAuth().subscribe(auth => {
       if (auth) {
@@ -47,6 +49,7 @@ export class AppComponent implements OnInit{
     })
   }
 
+  // Metodo para hacer logout
   onLogout() {
     this.authService.logout();
   }

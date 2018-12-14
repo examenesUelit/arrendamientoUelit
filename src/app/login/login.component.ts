@@ -13,10 +13,12 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
+  // Metodo de acceso con Google
   onClickGoogleLogin() {
     this.authService.loginGoogle()    
   }
 
+  // Metodo de acceso con Facebook
   onClickFacebookLogin() {
     this.authService.facebookLogin()
   }

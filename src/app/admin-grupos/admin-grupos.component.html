@@ -5,75 +5,14 @@
       <div class="col-md-8 mx-auto">
         <div class="card mb-5">
           <ul class="list-group text-center">
-            <!-- <a routerLink="/panelAdminUsers"> -->
-              <!-- <li class="list-group-item"> {{ grupo.grupo.Name }} </li> -->
-            <!-- </a> -->
-            <!-- <a routerLink="/panelAdminUsers">
-              <li class="list-group-item"> Nombre de Grupo </li>
+
+             <a routerLink="/panelAdminUsers" *ngFor="let grupo of grupos"> <!-- Directiva de Angular para replicar el elemento a para los li -->
+              <li class="list-group-item"> {{ grupo.grupoName }} </li> <!-- Interpolacion de String entre typeScript para poner datos en HTML -->
             </a>
-            <a routerLink="/panelAdminUsers">
-              <li class="list-group-item"> Nombre de Grupo </li>
-            </a>
-            <a routerLink="/panelAdminUsers">
-              <li class="list-group-item"> Nombre de Grupo </li>
-            </a>
-            <a routerLink="/panelAdminUsers">
-              <li class="list-group-item"> Nombre de Grupo </li>
-            </a>
-            <a routerLink="/panelAdminUsers">
-              <li class="list-group-item"> Nombre de Grupo </li>
-            </a>
-            <a routerLink="/panelAdminUsers">
-              <li class="list-group-item"> Nombre de Grupo </li>
-            </a>
-            <a routerLink="/panelAdminUsers">
-              <li class="list-group-item"> Nombre de Grupo </li>
-            </a>
-            <a routerLink="/panelAdminUsers">
-              <li class="list-group-item"> Nombre de Grupo </li>
-            </a>
-            <a routerLink="/panelAdminUsers">
-              <li class="list-group-item"> Nombre de Grupo </li>
-            </a>
-            <a routerLink="/panelAdminUsers">
-              <li class="list-group-item"> Nombre de Grupo </li>
-            </a>
-            <a routerLink="/panelAdminUsers">
-              <li class="list-group-item"> Nombre de Grupo </li>
-            </a>
-            <a routerLink="/panelAdminUsers">
-              <li class="list-group-item"> Nombre de Grupo </li>
-            </a>
-            <a routerLink="/panelAdminUsers">
-              <li class="list-group-item"> Nombre de Grupo </li>
-            </a>
-            <a routerLink="/panelAdminUsers">
-              <li class="list-group-item"> Nombre de Grupo </li>
-            </a>
-            <a routerLink="/panelAdminUsers">
-              <li class="list-group-item"> Nombre de Grupo </li>
-            </a>
-            <a routerLink="/panelAdminUsers">
-              <li class="list-group-item"> Nombre de Grupo </li>
-            </a>
-            <a routerLink="/panelAdminUsers">
-              <li class="list-group-item"> Nombre de Grupo </li>
-            </a>
-            <a routerLink="/panelAdminUsers">
-              <li class="list-group-item"> Nombre de Grupo </li>
-            </a>
-            <a routerLink="/panelAdminUsers">
-              <li class="list-group-item"> Nombre de Grupo </li>
-            </a>
-            <a routerLink="/panelAdminUsers">
-              <li class="list-group-item"> Nombre de Grupo </li>
-            </a>
-            <a routerLink="/panelAdminUsers">
-              <li class="list-group-item"> Nombre de Grupo </li>
-            </a> -->
+
           </ul>
         </div>
-        <a routerLink="/panelAdminNewGrupo" class="btn btn-info addQuestion"> Nuevo Grupo </a>
+        <a routerLink="/panelAdminNewGrupo" class="btn btn-info addQuestion"> Nuevo Grupo </a> <!-- Boton para redireccionar al elemto panel de admin de nuevo grupo -->
       </div>
     </div>
   </div>

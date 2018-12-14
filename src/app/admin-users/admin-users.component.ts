@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AdminUsersComponent implements OnInit {
 
   constructor() { }
-
+// YA NO LO TERMINE PPOR ESO NO HAY NADA QUE COMENTAR
   ngOnInit() {
   }
 

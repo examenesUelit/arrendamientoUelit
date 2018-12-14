@@ -1,6 +1,7 @@
+// Modelo del grupo
 export interface GrupoInterface {
-    grupoId?: string,
-    grupoName?: string,
-    userId?: string,
+    grupoId?: any
+    grupoName?: string
+    userId?: string
     userEmail?: string
 }

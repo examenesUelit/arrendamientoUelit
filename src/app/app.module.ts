@@ -32,6 +32,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from './services/auth.service';
 import { GrupoService } from './services/grupo.service';
 import { MensajeService } from './services/mensaje.service';
+import { UserPanelLiderComponent } from './user-panel-lider/user-panel-lider.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { MensajeService } from './services/mensaje.service';
     AdminNewGrupoComponent,
     NotFoundComponent,
     LoginAdminComponent,
-    LoginAdminRegistroComponent
+    LoginAdminRegistroComponent,
+    UserPanelLiderComponent
   ],
   imports: [
     BrowserModule,
